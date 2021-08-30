@@ -783,6 +783,9 @@ body {
   border-bottom: 2px solid #eeeeee;
   border-right: 2px solid #eeeeee;
   height: 100%;
+  -webkit-transition: background-color 0.2s ease-in-out 0s;
+  -o-transition: background-color 0.2s ease-in-out 0s;
+  transition: background-color 0.2s ease-in-out 0s;
 }
 
 .advantages__item h4 {
@@ -1244,6 +1247,37 @@ body {
 }
 
 @media (min-width: 769px) {
+  .advantages__item::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -7px;
+    width: 14px;
+    height: 14px;
+    -webkit-transform: translateY(-50%) rotate(44deg);
+        -ms-transform: translateY(-50%) rotate(44deg);
+            transform: translateY(-50%) rotate(44deg);
+    background-color: #fff;
+    border-top: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out 0s;
+    -o-transition: opacity 0.2s ease-in-out 0s;
+    transition: opacity 0.2s ease-in-out 0s;
+  }
+
+  .advantages__item:hover {
+    background-color: #fef0f0;
+  }
+
+  .advantages__item:hover::before {
+    opacity: 1;
+  }
+
   .advantages__item:nth-child(3n) {
     border-right: none;
   }
