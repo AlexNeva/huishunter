@@ -3775,7 +3775,7 @@ body {
 .intro {
   padding-top: 90px;
   padding-bottom: 270px;
-  background: url("../img/intro/intro-bg.png") 0 0/cover no-repeat;
+  background: url("img/intro/intro-bg.png") 0 0/cover no-repeat;
 }
 
 .intro__title {
@@ -4387,19 +4387,19 @@ body {
 }
 
 .scl__item:nth-child(1) .scl__link {
-  background: url("../img/scl/logos.png") 0 0 no-repeat;
+  background: url("img/scl/logos.png") 0 0 no-repeat;
 }
 
 .scl__item:nth-child(2) .scl__link {
-  background: url("../img/scl/logos.png") -40px 0 no-repeat;
+  background: url("img/scl/logos.png") -40px 0 no-repeat;
 }
 
 .scl__item:nth-child(3) .scl__link {
-  background: url("../img/scl/logos.png") -80px 0 no-repeat;
+  background: url("img/scl/logos.png") -80px 0 no-repeat;
 }
 
 .scl__item:nth-child(4) .scl__link {
-  background: url("../img/scl/logos.png") -120px 0 no-repeat;
+  background: url("img/scl/logos.png") -120px 0 no-repeat;
 }
 
 .scl__link {
@@ -4606,7 +4606,7 @@ body {
   }
 
   .intro {
-    background: url("../img/intro/intro-bg-992.png") 0 0/cover no-repeat;
+    background: url("img/intro/intro-bg-992.png") 0 0/cover no-repeat;
   }
 }
 
