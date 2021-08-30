@@ -206,6 +206,16 @@ body {
   font-size: 37px;
 }
 
+.section-descr {
+  font-size: 18px;
+  line-height: 1.8;
+  border-radius: 7px;
+  padding: 20px;
+  background-color: #eeeeee;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 /**
  * Swiper 7.0.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -946,6 +956,31 @@ body {
   margin-right: 10px;
 }
 
+.for {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.for__title {
+  margin-bottom: 1em;
+}
+
+.for__list {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.for__item {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.for__item::before {
+  content: "-";
+  font-size: inherit;
+  margin-right: 7px;
+}
+
 .offer {
   padding-top: 60px;
   padding-bottom: 85px;
@@ -1062,6 +1097,18 @@ body {
   font-size: 43px;
   color: #e04245;
   font-weight: 300;
+}
+
+.about {
+  padding-bottom: 80px;
+}
+
+.about__title {
+  margin-bottom: 1em;
+}
+
+.about__descr p:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .footer__top {
@@ -1325,6 +1372,10 @@ body {
     font-size: calc(22px + 15 * ((100vw - 320px) / (1160 - 320)));
   }
 
+  .section-descr {
+    font-size: calc(14px + 4 * ((100vw - 320px) / (1160 - 320)));
+  }
+
   .intro__title {
     font-size: calc(26px + 29 * ((100vw - 320px) / (1160 - 320)));
   }
@@ -1359,6 +1410,10 @@ body {
 
   .card-price__body {
     font-size: calc(32px + 11 * ((100vw - 320px) / (1160 - 320)));
+  }
+
+  .for__item {
+    font-size: calc(14px + 4 * ((100vw - 320px) / (1160 - 320)));
   }
 
   .body-offer__item {
@@ -1487,8 +1542,17 @@ body {
     padding-bottom: 50px;
   }
 
+  .for {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
   .offer {
     padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about {
     padding-bottom: 40px;
   }
 

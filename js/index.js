@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerMenu.classList.toggle('active');
   })
 
+  function closeMenu() {
+    burgerBtn.classList.remove('active');
+
+    burgerMenu.classList.remove('active');
+  }
+
   // Swiper init ==================
 
   // const swiper = new Swiper('.advantages-swiper', {
@@ -65,5 +71,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Swiper init ==================
+
+
+  // Scroll to Anchors init ==================
+
+
+  function scrollToAnchors() {
+    const anchors = document.querySelectorAll('a[href*="#"]')
+
+    anchors.forEach(el => {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetID = el.getAttribute('href').substr(1);
+        const targetPosition = document.getElementById(targetID).offsetTop; /* положение блока от верха документа */
+        const currentPosition = window.pageYOffset; /* текущее положение окна */
+        const distance = targetPosition - currentPosition;
+        const duration = 1000; /* 1 секунда */
+        let start = null;
+
+
+        window.requestAnimationFrame(step);
+
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          window.scrollTo(0, distance * (progress / duration) + currentPosition);
+          if (progress < duration) window.requestAnimationFrame(step);
+        }
+
+        closeMenu()
+      })
+    })
+
+
+  }
+
+  scrollToAnchors()
+
+  // Scroll to Anchors init ==================
 
 });
