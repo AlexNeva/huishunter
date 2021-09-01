@@ -644,29 +644,41 @@ body {
 }
 
 .form-intro {
+  width: 100%;
+  max-width: 745px;
   border-radius: 5px;
   background-color: #fff;
   padding: 25px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.form-intro__control {
-  margin-right: 15px;
+.form-intro__page {
+  width: 100%;
+}
+
+.form-intro__page:nth-child(1) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (225px)[3];
+  grid-template-columns: repeat(3, 225px);
+  gap: 15px;
+}
+
+.form-intro__page:nth-child(2),
+.form-intro__page:nth-child(3) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .form-intro__control input {
-  width: 215px;
+  width: 100%;
   height: 50px;
   border-radius: 4px;
   border: 1px solid #dadada;
   padding: 0 15px;
   background-color: #f0f0f3;
-  font-size: 23px;
   font-size: 23px;
 }
 
@@ -695,28 +707,72 @@ body {
   font-weight: 300;
 }
 
-.form-intro__control input:focus {
+.form-intro__control input.invalid {
   border: 1px solid #e04245;
 }
 
-.form-intro__control input:focus::-webkit-input-placeholder {
+.form-intro__control input.invalid::-webkit-input-placeholder {
   color: #000;
 }
 
-.form-intro__control input:focus::-moz-placeholder {
+.form-intro__control input.invalid::-moz-placeholder {
   color: #000;
 }
 
-.form-intro__control input:focus:-ms-input-placeholder {
+.form-intro__control input.invalid:-ms-input-placeholder {
   color: #000;
 }
 
-.form-intro__control input:focus::-ms-input-placeholder {
+.form-intro__control input.invalid::-ms-input-placeholder {
   color: #000;
 }
 
-.form-intro__control input:focus::placeholder {
+.form-intro__control input.invalid::placeholder {
   color: #000;
+}
+
+.form-intro__control textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  padding: 15px;
+  background-color: #f0f0f3;
+  font-size: 23px;
+}
+
+.form-intro__control textarea::-webkit-input-placeholder {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.form-intro__control textarea::-moz-placeholder {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.form-intro__control textarea:-ms-input-placeholder {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.form-intro__control textarea::-ms-input-placeholder {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.form-intro__control textarea::placeholder {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.form-intro__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-intro__btn {
@@ -739,7 +795,6 @@ body {
   padding: 0 20px;
   -webkit-box-shadow: 0 4px 0 0 #b92023;
           box-shadow: 0 4px 0 0 #b92023;
-  margin-left: 15px;
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -756,6 +811,110 @@ body {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+}
+
+.form-intro__btn--prev {
+  background-color: #f0f0f3;
+  -webkit-box-shadow: 0 4px 0 0 #dadada;
+          box-shadow: 0 4px 0 0 #dadada;
+  margin-right: 15px;
+  color: #000;
+}
+
+.form-intro__btn--prev span {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+#field_2_4,
+#field_2_5 {
+  grid-column: 1/-1;
+}
+
+.title-control {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.form-control__radio label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.form-control__radio label > span {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f3;
+  border-radius: 50%;
+  margin-right: 16px;
+  border: 1px solid #dadada;
+}
+
+.form-control__radio label > span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e04245;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0s;
+  transition: -webkit-transform 0.2s ease-in-out 0s;
+  -o-transition: transform 0.2s ease-in-out 0s;
+  transition: transform 0.2s ease-in-out 0s;
+  transition: transform 0.2s ease-in-out 0s, -webkit-transform 0.2s ease-in-out 0s;
+}
+
+.form-control__radio input[type=radio]:checked + label span::before {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.form-control__radio input[type=radio]:checked + label {
+  font-weight: 700;
+}
+
+.form-control__radio:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#gform_page_2_4 header {
+  font-size: 32px;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+#gform_page_2_4 h4 {
+  font-size: 26px;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+#gform_page_2_4 p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .advantages {
@@ -1388,8 +1547,20 @@ body {
     font-size: calc(18px + 5 * ((100vw - 320px) / (1160 - 320)));
   }
 
+  .form-intro__control textarea {
+    font-size: calc(18px + 5 * ((100vw - 320px) / (1160 - 320)));
+  }
+
   .form-intro__btn {
     font-size: calc(18px + 5 * ((100vw - 320px) / (1160 - 320)));
+  }
+
+  #gform_page_2_4 header {
+    font-size: calc(22px + 10 * ((100vw - 320px) / (1160 - 320)));
+  }
+
+  #gform_page_2_4 h4 {
+    font-size: calc(20px + 6 * ((100vw - 320px) / (1160 - 320)));
   }
 
   .advantages__title {
@@ -1459,19 +1630,8 @@ body {
     max-width: 400px;
   }
 
-  .form-intro {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-  }
-
   .form-intro__control input {
     width: 100%;
-  }
-
-  .form-intro__control {
-    margin-right: 0;
-    margin-bottom: 20px;
   }
 
   .form-intro__btn {

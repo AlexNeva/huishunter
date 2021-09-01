@@ -118,17 +118,120 @@
       <h3 class="form-wrapper__title">
         Vraag direct uw bod aan
       </h3>
-      <form action="#" class="intro__form form-intro">
-        <div class="form-intro__control">
-          <input type="text" placeholder="Postcode">
+      <form action="#" class="intro__form form-intro" id="gform_2">
+        <div id="gform_page_2_1" class="form-intro__page">
+          <div id="field_2_1" class="form-intro__control">
+            <input id="input_2_1" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+          </div>
+          <div id="field_2_2" class="form-intro__control">
+            <input id="input_2_2" type="text" placeholder="Huisnummer" aria-required="true" aria-invalid="false">
+          </div>
+          <div id="field_2_3" class="form-intro__control">
+            <input id="input_2_3" type="text" placeholder="Toevoeging" aria-required="true" aria-invalid="false">
+          </div>
+          <div id="field_2_4" class="form-intro__control">
+            <input id="input_2_4" type="text" placeholder="Straatnaam" aria-invalid="false" readonly>
+          </div>
+          <div id="field_2_5" class="form-intro__control">
+            <input id="input_2_5" type="text" placeholder="Plaats" aria-invalid="false" readonly>
+          </div>
+          <button id="gform_next_button_2_6" class="form-intro__btn btn">
+            Volgende <span>❯</span>
+          </button>
         </div>
-        <div class="form-intro__control">
-          <input type="text" placeholder="Huisnummer">
-        </div>
-        <button class="form-intro__btn btn">
-          Volgende <span>❯</span>
-        </button>
+        <div id="gform_page_2_2" class="form-intro__page" style="display: none;">
+          <div id="field_2_7" class="form-intro__control">
+            <input id="input_2_7" name="user-name" type="text" placeholder="Naam" aria-required="true"
+              aria-invalid="false">
+          </div>
+          <div id="field_2_8" class="form-intro__control">
+            <input id="input_2_8" type="text" name="user-email" placeholder="E-mail" aria-required="true"
+              aria-invalid="false" data-inputmask="'alias': 'email'" inputmode="email">
+          </div>
+          <div id="field_2_9" class="form-intro__control">
+            <input id="input_2_9" type="text" name="user-phone" placeholder="Telefoon" aria-required="true"
+              aria-invalid="false" inputmode="text">
+          </div>
+          <div class="form-intro__btns">
+            <button class="dw-prev-btn form-intro__btn form-intro__btn--prev btn" rel="prev">
+              <span>❯</span>
+              Vorige</button>
+            <button id="gform_next_button_2_10" class="form-intro__btn btn">
+              Volgende <span>❯</span>
+            </button>
+          </div>
 
+        </div>
+        <div id="gform_page_2_3" class="form-intro__page" style="display: none;">
+          <div id="field_2_13" class="form-intro__control form-control">
+            <div class="title-control">
+              Staat de woning of het pand al te koop?
+            </div>
+            <div class="form-control__radios" id="input_2_13">
+              <div class="form-control__radio gchoice gchoice_2_13_0">
+
+                <input name="input_13" type="radio" value="Ja" id="choice_2_13_0" class="visually-hidden">
+                <label for="choice_2_13_0" id="label_2_13_0">
+                  <span></span>
+                  Ja
+                </label>
+              </div>
+              <div class="form-control__radio gchoice gchoice_2_13_1">
+
+                <input checked name="input_13" type="radio" value="Ja" id="choice_2_13_1" class="visually-hidden">
+                <label for="choice_2_13_1" id="label_2_13_1">
+                  <span></span>
+                  Nee
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="field_2_19" class="form-intro__control" style="display: none;">
+            <label class="title-control" for="input_2_19">Hoe lang staat deze te koop?</label>
+            <input name="input_19" id="input_2_19" type="text" value="" aria-invalid="false">
+          </div>
+          <div id="field_2_20" class="form-intro__control" style="display: none;">
+            <label class=" title-control" for="input_2_20">Wat is op dit moment de vraagprijs?</label>
+            <input name="input_20" id="input_2_20" type="text" value="" placeholder="€" aria-invalid="false">
+          </div>
+          <div id="field_2_14" class="form-intro__control">
+            <label class="title-control" for="input_2_14">WELKE MINIMALE PRIJS WILT U ONTVANGEN?</label>
+            <input name="input_14" id="input_2_14" type="text" value="" placeholder="€" aria-invalid="false">
+          </div>
+          <div id="field_2_22" class="form-intro__control">
+            <label class="title-control" for="input_2_22">WELKE MINIMALE PRIJS WILT U ONTVANGEN?</label>
+            <input name="input_22" id="input_2_22" type="text" value="" placeholder="Datum" aria-invalid="false"
+              inputmode="text">
+          </div>
+          <div id="field_2_16" class="form-intro__control">
+            <label class="title-control" for="input_2_16">WELKE MINIMALE PRIJS WILT U ONTVANGEN?</label>
+            <textarea name="input_16" id="input_2_16" placeholder="Opmerkingen" aria-invalid="false" rows="5"
+              cols="50"></textarea>
+          </div>
+          <div class="form-intro__btns">
+            <button class="dw-prev-btn form-intro__btn form-intro__btn--prev btn" rel="prev">
+              <span>❯</span>
+              Vorige</button>
+            <button id="gform_next_button_2_10" class="form-intro__btn btn">
+              Volgende <span>❯</span>
+            </button>
+          </div>
+        </div>
+        <div id="gform_page_2_4" style="display: none;">
+          <header>
+            BEDANKT!
+          </header>
+          <h4>
+            UW AANMELDING IS ONTVANGEN
+          </h4>
+          <p>Hartelijk dank voor uw aanmelding bij Huishunters, wij hebben uw gegevens ontvangen en zullen zo snel
+            mogelijk contact met u opnemen.</p>
+          <p>Tot snel!</p>
+        </div>
+        <div style=" display: none;" class="form-intro__page">
+          <input type="hidden" id="street-hidden">
+          <input type="hidden" id="city-hidden">
+        </div>
       </form>
     </div>
 
@@ -755,8 +858,12 @@
 </div>
 </div>
 
-
+<script src="js/libs/jquery-3.6.0.min.js"></script>
 <script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/jquery.inputmask.min.js"></script>
+
+<script src="js/libs/qwe-form.js"></script>
+
 
 <script src=js/index.js></script>
 </body>
