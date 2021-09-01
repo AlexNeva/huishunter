@@ -674,6 +674,7 @@ body {
 
 .form-intro__control input {
   width: 100%;
+  min-width: 0;
   height: 50px;
   border-radius: 4px;
   border: 1px solid #dadada;
@@ -785,7 +786,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 225px;
+  width: 100%;
   height: 50px;
   border-radius: 5px;
   background-color: #e04245;
@@ -813,6 +814,10 @@ body {
           transform: translateY(0);
 }
 
+.form-intro__btn span {
+  margin-left: 10px;
+}
+
 .form-intro__btn--prev {
   background-color: #f0f0f3;
   -webkit-box-shadow: 0 4px 0 0 #dadada;
@@ -825,6 +830,7 @@ body {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  margin-right: 10px;
 }
 
 #field_2_4,
@@ -1552,7 +1558,11 @@ body {
   }
 
   .form-intro__btn {
-    font-size: calc(18px + 5 * ((100vw - 320px) / (1160 - 320)));
+    font-size: calc(16px + 7 * ((100vw - 320px) / (1160 - 320)));
+  }
+
+  .title-control {
+    font-size: calc(14px + 4 * ((100vw - 320px) / (1160 - 320)));
   }
 
   #gform_page_2_4 header {
@@ -1617,6 +1627,11 @@ body {
   .intro {
     background: url("img/intro/intro-bg-992.png") 0 0/cover no-repeat;
   }
+
+  .form-intro__page:nth-child(1) {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1676,6 +1691,10 @@ body {
 }
 
 @media (max-width: 576px) {
+  .form-intro__page {
+    padding: 20px 15px;
+  }
+
   .advantages {
     margin-bottom: 40px;
   }
