@@ -142,8 +142,8 @@ postalInputs.on("input", () => {
       document.getElementById("input_2_5").value = data.results[0].city;
       document.getElementById("street-hidden").value = data.results[0].street;
       document.getElementById("city-hidden").value = data.results[0].city;
-      $("#input_2_4").removeAttr("disabled");
-      $("#input_2_5").removeAttr("disabled");
+      $("#field_2_4").fadeIn();
+      $("#field_2_5").fadeIn();
       invlaidPostalCode = false;
     } else {
       postalInputs.addClass("invalid");
