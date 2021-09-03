@@ -1122,6 +1122,10 @@ body {
   margin-right: 10px;
 }
 
+.card-price__body span:nth-child(2) {
+  color: #000;
+}
+
 .for {
   padding-top: 50px;
   padding-bottom: 110px;
@@ -1253,7 +1257,7 @@ body {
   bottom: -6px;
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #f8f8f8;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
